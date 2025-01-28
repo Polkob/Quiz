@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="quiz, questions, game, knowledge, health">
+  <title>Здоровое питание</title>
+  <script src="https://kit.fontawesome.com/047a896e47.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style/main.css">
+  <script defer src="script/scpript.js"></script>
+</head>
+<body>
+
+<!-- START PAGE -->
+<div class="container-settings">
+  <div class="start-page">
+    <h1 class="heading">Викторина "Здоровое питание"</h1>
+    <button class="btn begin">Начать</button>
+  </div>
+</div>
+
+<!-- INSTRUCTIONS -->
+<dialog class="instructions">
+    <div class="popup-content">
+      <h2 class="instruction-heading">Инструкция</h2>
+      <p class="instruction-text">Добро пожаловать на викторину "Здоровое питание"! Пожалуйста, внимательно прочитайте инструкцию.</p>
+      <ol class="instruction-list">
+        <li>Перед началом выберите количество вопросов, категорию и уровень сложности.</li>
+        <li>Вам будет предложено ответить на определенное количество вопросов в установленное время.</li>
+        <li>Каждый вопрос будет иметь один вариант ответа. Выберите тот, который считаете правильным.</li>
+        <li>Если вы не знаете ответ, можете пропустить вопрос, но вернуться к предыдущим нельзя.</li>
+        <li>После выбора ответа вы сразу увидите, был ли он правильным.</li>
+        <li>Как только вы пройдете тест, ваши результаты будут отображены.</li>
+        <li>Удачи вам и приятного времяпрепровождения!</li>
+      </ol>
+      <div class="instruction-buttons">
+        <button class="btn exit">Выйти</button>
+        <button class="btn continue">Продолжить</button>
+      </div>
+    </div>
+  </dialog>
+
+<!-- SETTINGS -->
+<div class="container hide">
+
+  <div class="start-screen">
+    <h1 class="heading">Здоровое питание</h1>
+    <div class="settings">
+      <label for="num-questions">Количество вопросов:</label>
+      <select id="num-questions">
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </select>
+
+      <label for="time">Время на ответ:</label>
+      <select id="time">
+        <option value="10">10 секунд</option>
+        <option value="15">15 секунд</option>
+        <option value="20">20 секунд</option>
+      </select>
+    </div>
+    <button class="btn start">Начать</button>
+  </div>
+
+  <!-- QUIZ BOX -->
+  <div class="quiz hide">
+    <div class="timer">
+      <div class="progress">
+        <div class="progress-bar"></div>
+        <span class="progress-text"></span>
+      </div>
+    </div>
+    <div class="question-wrapper">
+      <div class="number">
+        Вопрос <span class="current">1</span>
+        <span class="total">/10</span>
+      </div>
+      <div class="question">Вопрос?</div>
+    </div>
+    <div class="answer-wrapper">
+      <div class="answer selected">
+        <span class="text">Ответ</span>
+        <span class="checkbox">
+          <i class="fas fa-check"></i>
+        </span>
+      </div>
+    </div>
+    <button class="btn submit" disabled>Подтвердить</button>
+    <button class="btn next">Следующий</button>
+  </div>
+
+  <!-- END -->
+  <div class="end-screen hide">
+    <h1 class="heading">Результат</h1>
+    <div class="score">
+      <div>
+        <span class="final-score">0</span>
+        <span class="total-score">/10</span>
+      </div>
+    </div>
+    <button class="btn restart">Начать заново</button>
+  </div>
+</div>
+
+
+</body>
+</html>
