@@ -129,15 +129,23 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch(url)
           .then((res) => res.json())
           .then((data) => {
+            const shuffleArray = (array) => {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+            };
+    
+            shuffleArray(data);
             questions = data.slice(0, num);
             setTimeout(() => {
-              startScreen.classList.add("hide");
-              quiz.classList.remove("hide");
-              currentQuestion = 1;
-              showQuestion(questions[0]);
+                startScreen.classList.add("hide");
+                quiz.classList.remove("hide");
+                currentQuestion = 1;
+                showQuestion(questions[0]);
             }, 1000);
           });
-      };
+    };
   
     startBtn.addEventListener("click", startQuiz);
   

@@ -119,14 +119,14 @@ select {
 
 .question-wrapper .number {
   color: hsl(338, 78%, 48%);
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
   margin-bottom: 20px;
 }
 
 .question-wrapper .number .total {
   color: hsl(338, 78%, 48%);
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .question-wrapper .question {
@@ -237,21 +237,6 @@ select {
   margin-bottom: 120px;
 }
 
-/*MOBILE*/
-@media (max-width: 767px) {
-    .header {
-        font-size: 16px;
-    }
-}
-
-/*LAPTOP*/
-@media (min-width: 768px) {
-    .header {
-        font-size: 24px;
-    }
-}
-
-/* DIALOG */
 .instructions {
   width: 80%;
   max-width: 600px;
@@ -267,13 +252,12 @@ select {
   z-index: 1000;
 }
 
-/* dialog's content */
 .popup-content {
   padding: 20px;
 }
 
 .instruction-heading {
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -299,4 +283,134 @@ select {
 .hide {
   display: none;
 }
+
+@media (min-width: 500px) and (max-width: 767px) {
+
+  .container{
+    padding: 20px;
+    max-width: 90%; 
+  }
+
+  .container-settings {
+    padding: 20px;
+    width: 80%;
+    max-width: 80%; 
+  }
+
+  .heading {
+    font-size: 20px; 
+    margin-bottom: 30px;
+  }
+
+  label {
+    font-size: 14px; 
+  }
+
+  select {
+    padding: 8px; 
+    font-size: 12px; 
+  }
+
+  .timer {
+    margin-bottom: 20px; 
+  }
+
+  .question-wrapper .number {
+    font-size: 20px; 
+  }
+
+  .question-wrapper .question {
+    font-size: 18px; 
+  }
+
+  .answer-wrapper .answer {
+    height: 50px;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .btn {
+    height: 50px; 
+    font-size: 16px;
+  }
+
+  .end-screen .score {
+    font-size: 20px; 
+  }
+
+  .score .score-text {
+    font-size: 25px; 
+  }
+  .instructions {
+    font-size: 14px;
+    width: 90%; 
+    max-width: 90%; 
+    padding: 15px; 
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); 
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.333);
+    z-index: 1000;
+  }
+
+  .instruction-heading {
+    font-size: 20px;
+  }
+
+  .instruction-text {
+    font-size: 14px; 
+  }
+
+  .instruction-buttons .btn {
+    padding: 8px 16px;
+    font-size: 14px; 
+  }
+}
+
+@media (max-width: 499px) {
+
+  
+  .container, .container-settings {
+    width: 80%;
+  }
+  .heading {
+    font-size: 20px;
+  }
+  .btn {
+    height: 6vh;
+  }
+  .instructions {
+    font-size: 10px;
+  }
+  .instruction-heading {
+    font-size: 15px;
+  }
+
+  .instruction-text {
+    font-size: 10px; 
+  }
+
+  .instruction-buttons .btn {
+    padding: 8px 16px;
+    height: auto;
+    font-size: 14px;
+  }
+
+  .question-wrapper .number {
+    font-size: 15px;
+  }
+
+  .question-wrapper .question {
+    font-size: 13px;
+  }
+
+  .answer-wrapper .answer {
+    height: 30px; 
+    padding: 15px; 
+    font-size: 13px; 
+  }
+
+
+}
+
+
 
